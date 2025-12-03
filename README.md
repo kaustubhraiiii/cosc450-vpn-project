@@ -2,7 +2,7 @@
 
 **Team:** Kaustubh Rai and Longyu Tang  
 **Course:** COSC 450 - Computer Networks  
-**Semester:** Fall 2024
+**Semester:** Fall 2025
 
 ## Project Overview
 Advanced OpenVPN infrastructure with custom networked applications, featuring performance analysis and security evaluation.
