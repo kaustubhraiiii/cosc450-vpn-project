@@ -1,0 +1,52 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+# Test files
+uploads/
+*.bin
+*.dat
+test-files/
+*.pcap
+
+# Sensitive OpenVPN files
+*.key
+*.crt
+*.ovpn
+*.pem
+ta.key
+openvpn-ca/pki/private/
+client-configs/keys/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+
+# VirtualBox
+*.vdi
+*.vbox
+*.vbox-prev
+
+# Project specific
+cosc450-project.tar.gz
+chat-app.tar.gz
