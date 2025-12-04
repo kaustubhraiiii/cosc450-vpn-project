@@ -54,17 +54,21 @@ class FileTransferProtocol:
 
     @staticmethod
     def receive_message(sock):
-        """Receive a protocol message"""
-        # Receive header
-        header_bytes = sock.recv(HEADER_SIZE)
-        if not header_bytes:
-            return None, None, None
+        """Receive a protocol message safely (FIXED VERSION)"""
+        # ✅ Ensure full header read
+        header_bytes = b''
+        while len(header_bytes) < HEADER_SIZE:
+            chunk = sock.recv(HEADER_SIZE - len(header_bytes))
+            if not chunk:
+                return None, None, None
+            header_bytes += chunk
 
         header = FileTransferProtocol.parse_header(header_bytes)
 
-        # Receive payload
+        # ✅ Ensure full payload read
         payload = b''
         remaining = header['payload_size']
+
         while remaining > 0:
             chunk = sock.recv(min(BUFFER_SIZE, remaining))
             if not chunk:
