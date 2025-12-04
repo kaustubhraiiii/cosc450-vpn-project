@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-12-03T18:45:05.798258",
+  "target": "127.0.0.1",
+  "tests": {
+    "latency": {
+      "min": 0.025,
+      "max": 0.195,
+      "avg": 0.05498,
+      "stdev": 0.03648342648605343,
+      "unit": "ms",
+      "samples": 50
+    },
+    "throughput": {
+      "value": 32938.72798372332,
+      "unit": "Mbps",
+      "duration": 10
+    },
+    "packet_loss": {
+      "value": 0.0,
+      "unit": "%"
+    }
+  }
+}

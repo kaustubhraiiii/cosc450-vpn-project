@@ -1,0 +1,9 @@
+COSC 450 Performance Test Summary
+==================================================
+
+BASELINE_NETWORK
+--------------------------------------------------
+Latency avg: 0.05 ms
+Throughput: 32938.73 Mbps
+Packet loss: 0.0%
+
