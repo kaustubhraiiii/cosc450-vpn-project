@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-12-03T23:54:41.942827",
+  "target": "github.com",
+  "tests": {
+    "latency": {
+      "min": 16.6,
+      "max": 61.2,
+      "avg": 26.17,
+      "stdev": 9.186197498954392,
+      "unit": "ms",
+      "samples": 50
+    },
+    "packet_loss": {
+      "value": 0.0,
+      "unit": "%"
+    }
+  }
+}

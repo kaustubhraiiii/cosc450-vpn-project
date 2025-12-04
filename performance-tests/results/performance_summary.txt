@@ -1,9 +1,24 @@
 COSC 450 Performance Test Summary
 ==================================================
 
+VPN_FULL_NETWORK
+--------------------------------------------------
+Latency avg: 24.83 ms
+Packet loss: 6.0%
+
+APP_PERFORMANCE
+--------------------------------------------------
+
+VPN_NETWORK
+--------------------------------------------------
+Latency avg: 0.08 ms
+Packet loss: 0.0%
+
+APP_PERFORMANCE_TEST
+--------------------------------------------------
+
 BASELINE_NETWORK
 --------------------------------------------------
-Latency avg: 0.05 ms
-Throughput: 32938.73 Mbps
+Latency avg: 0.09 ms
 Packet loss: 0.0%
 

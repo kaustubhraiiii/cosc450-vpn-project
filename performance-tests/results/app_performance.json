@@ -1,0 +1,70 @@
+{
+  "test_file": "/home/longyu/cosc450-vpn-project/file-transfer/test_app.bin",
+  "file_size_bytes": 5242880,
+  "scenarios": [
+    {
+      "name": "A_baseline_no_vpn_no_ssl",
+      "command": [
+        "python3",
+        "/home/longyu/cosc450-vpn-project/file-transfer/client/file_client.py",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "9997",
+        "--file",
+        "/home/longyu/cosc450-vpn-project/file-transfer/test_app.bin"
+      ],
+      "elapsed_seconds": 0.07664905399997224,
+      "return_code": 0,
+      "success": true
+    },
+    {
+      "name": "B_vpn_only",
+      "command": [
+        "python3",
+        "/home/longyu/cosc450-vpn-project/file-transfer/client/file_client.py",
+        "--host",
+        "10.8.0.1",
+        "--port",
+        "9997",
+        "--file",
+        "/home/longyu/cosc450-vpn-project/file-transfer/test_app.bin"
+      ],
+      "elapsed_seconds": 0.08168492699996932,
+      "return_code": 0,
+      "success": true
+    },
+    {
+      "name": "C_ssl_only",
+      "command": [
+        "python3",
+        "/home/longyu/cosc450-vpn-project/file-transfer/client/file_client_ssl.py",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "9999",
+        "--file",
+        "/home/longyu/cosc450-vpn-project/file-transfer/test_app.bin"
+      ],
+      "elapsed_seconds": 0.11045389899982183,
+      "return_code": 0,
+      "success": true
+    },
+    {
+      "name": "D_vpn_plus_ssl",
+      "command": [
+        "python3",
+        "/home/longyu/cosc450-vpn-project/file-transfer/client/file_client_ssl.py",
+        "--host",
+        "10.8.0.1",
+        "--port",
+        "9999",
+        "--file",
+        "/home/longyu/cosc450-vpn-project/file-transfer/test_app.bin"
+      ],
+      "elapsed_seconds": 0.11770880099993519,
+      "return_code": 0,
+      "success": true
+    }
+  ]
+}
