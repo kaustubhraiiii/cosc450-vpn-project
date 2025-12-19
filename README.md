@@ -10,8 +10,8 @@ Advanced OpenVPN infrastructure with custom networked applications, featuring pe
 ## Components
 1. ✅ OpenVPN Server/Client Infrastructure (Complete - Split Tunnel Mode)
 2. ✅ Multi-Client Chat Application (Complete - Kaustubh)
-3. 🔄 File Transfer Application (In Progress - Longyu)
-4. 🔄 Performance Testing Framework (In Progress - Longyu)
+3. ✅ File Transfer Application (Complete - Longyu)
+4. ✅ Performance Testing Framework (Complete - Longyu)
 
 ## Project Structure
 ```
@@ -83,7 +83,34 @@ python3 client/chat_client.py --host 127.0.0.1 --username YourName
 - `/quit` - Exit the chat
 
 ### File Transfer Application
-[To be completed by Longyu - See implementation document]
+
+**Start Server (Non-SSL):**
+```bash
+cd file-transfer
+source venv/bin/activate
+python3 server/file_server.py --host 0.0.0.0 --port 9999
+```
+
+**Start Server (SSL/TLS):**
+```bash
+cd file-transfer
+source venv/bin/activate
+python3 server/file_server_ssl.py --host 0.0.0.0 --port 9998 --certfile certs/server.crt --keyfile certs/server.key
+```
+
+**Start Client (Non-SSL):**
+```bash
+cd file-transfer
+source venv/bin/activate
+python3 client/file_client.py --host 127.0.0.1 --port 9999 --file <path-to-file>
+```
+
+**Start Client (SSL/TLS):**
+```bash
+cd file-transfer
+source venv/bin/activate
+python3 client/file_client_ssl.py --host 127.0.0.1 --port 9998 --file <path-to-file>
+```
 
 ## Team Responsibilities
 - **Kaustubh Rai:** 
@@ -100,9 +127,9 @@ python3 client/chat_client.py --host 127.0.0.1 --username YourName
 
 ## Current Status
 - **Week 1:** ✅ VPN infrastructure complete (split tunnel mode working)
-- **Week 2:** ✅ Chat app complete, 🔄 File transfer in progress
-- **Week 3:** 🔄 Integration testing planned
-- **Week 4:** 🔄 Performance analysis & final report
+- **Week 2:** ✅ Chat app complete, ✅ File transfer complete
+- **Week 3:** ✅ Integration testing complete
+- **Week 4:** ✅ Performance analysis & final report complete
 
 ## VPN Configuration
 - **Mode:** Split Tunnel
@@ -111,6 +138,19 @@ python3 client/chat_client.py --host 127.0.0.1 --username YourName
 - **Client IP:** 10.8.0.2
 - **Encryption:** AES-256-CBC
 - **Authentication:** SHA256
+
+## Technologies Used
+
+- **Programming Languages:** Python 3.10+
+- **Networking:** Socket programming, TCP/IP, OpenVPN
+- **Security:** SSL/TLS, AES-256-CBC encryption, SHA256 authentication
+- **Cryptography:** Python `ssl`, `hashlib`, `cryptography` library
+- **Performance Testing:** iperf3, ping, subprocess automation
+- **Data Visualization:** Matplotlib, NumPy
+- **Data Formats:** JSON
+- **System Administration:** Bash scripting, Linux systemd
+- **Protocol Design:** Custom binary protocol with headers and metadata
+- **Tools:** Wireshark (packet capture), OpenVPN (VPN infrastructure)
 
 ## Testing
 All applications tested over both:
